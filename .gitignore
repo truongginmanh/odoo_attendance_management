@@ -18,17 +18,18 @@ env/
 
 # Local Odoo configuration
 odoo.conf
+*.conf.local
 
 # Odoo logs
 *.log
 
-# Odoo filestore / local data
+# Odoo local data
 filestore/
 sessions/
 
 
 # ============================================================
-# Environment
+# Environment variables / secrets
 # ============================================================
 
 .env
@@ -59,7 +60,7 @@ htmlcov/
 
 
 # ============================================================
-# OS
+# Operating System
 # ============================================================
 
 .DS_Store
