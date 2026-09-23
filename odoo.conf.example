@@ -38,4 +38,4 @@ list_db = True
 ; Logging
 ; ============================================================
 
-log_level = info
+log_level = info    

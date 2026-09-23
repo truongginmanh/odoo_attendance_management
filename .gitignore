@@ -65,3 +65,6 @@ htmlcov/
 
 .DS_Store
 Thumbs.db
+# Local backup files
+*.backup
+*.before_encoding_fix

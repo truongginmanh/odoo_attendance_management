@@ -1,0 +1,5 @@
+row,employee_code,date,error_type,message
+34,NV001,2026-09-01,DUPLICATE,Bản ghi chấm công bị trùng
+35,NV006,,INVALID_TIMESTAMP,Timestamp không hợp lệ: 2026-99-99 25:70:00
+,NV004,2026-09-03,MISSING_CHECK_OUT,Thiếu CHECK-OUT sau 08:15:00
+,NV005,2026-09-04,MISSING_CHECK_OUT,Thiếu CHECK-OUT sau 08:05:30
