@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- List View -->
+    <record id="view_employee_mapping_list" model="ir.ui.view">
+        <field name="name">attendance.employee.mapping.list</field>
+        <field name="model">attendance.employee.mapping</field>
+        <field name="arch" type="xml">
+            <list string="Employee Mapping">
+                <field name="name"/>
+                <field name="employee_code"/>
+                <field name="employee_id"/>
+                <field name="device_id"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="view_employee_mapping_form" model="ir.ui.view">
+        <field name="name">attendance.employee.mapping.form</field>
+        <field name="model">attendance.employee.mapping</field>
+        <field name="arch" type="xml">
+            <form string="Employee Mapping">
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+                            <field name="name"/>
+                            <field name="employee_code"/>
+                            <field name="employee_id"/>
+                        </group>
+
+                        <group>
+                            <field name="device_id"/>
+                            <field name="active"/>
+                        </group>
+
+                    </group>
+
+                    <notebook>
+
+                        <page string="Notes">
+                            <field name="note"/>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="action_employee_mapping" model="ir.actions.act_window">
+        <field name="name">Employee Mapping</field>
+        <field name="res_model">attendance.employee.mapping</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <!-- Menu -->
+    <menuitem
+        id="menu_attendance_management_root"
+        name="Attendance Management"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_employee_mapping"
+        name="Employee Mapping"
+        parent="menu_attendance_management_root"
+        action="action_employee_mapping"
+        sequence="10"
+    />
+
+</odoo>
