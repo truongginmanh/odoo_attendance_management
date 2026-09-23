@@ -23,6 +23,9 @@
     "data": [
         "security/ir.model.access.csv",
         "views/employee_mapping_views.xml",
+        "views/raw_attendance_views.xml",
+        "views/device_views.xml",
+        "views/sync_log_views.xml",
     ],
     "installable": True,
     "application": True,

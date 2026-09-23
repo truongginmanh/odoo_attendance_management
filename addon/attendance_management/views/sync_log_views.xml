@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- List View -->
+    <record id="view_attendance_sync_log_list" model="ir.ui.view">
+        <field name="name">attendance.sync.log.list</field>
+        <field name="model">attendance.sync.log</field>
+        <field name="arch" type="xml">
+            <list string="Sync Logs">
+                <field name="name"/>
+                <field name="device_id"/>
+                <field name="sync_start"/>
+                <field name="sync_end"/>
+                <field name="status"/>
+                <field name="total_records"/>
+                <field name="new_records"/>
+                <field name="duplicate_records"/>
+                <field name="error_records"/>
+            </list>
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="view_attendance_sync_log_form" model="ir.ui.view">
+        <field name="name">attendance.sync.log.form</field>
+        <field name="model">attendance.sync.log</field>
+        <field name="arch" type="xml">
+            <form string="Sync Log">
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+                            <field name="name"/>
+                            <field name="device_id"/>
+                            <field name="status"/>
+                            <field name="sync_start"/>
+                            <field name="sync_end"/>
+                        </group>
+
+                        <group>
+                            <field name="total_records"/>
+                            <field name="new_records"/>
+                            <field name="duplicate_records"/>
+                            <field name="error_records"/>
+                        </group>
+
+                    </group>
+
+                    <notebook>
+
+                        <page string="Message">
+                            <field name="message"/>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="action_attendance_sync_log" model="ir.actions.act_window">
+        <field name="name">Sync Logs</field>
+        <field name="res_model">attendance.sync.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <!-- Menu -->
+    <menuitem
+        id="menu_attendance_sync_log"
+        name="Sync Logs"
+        parent="menu_attendance_management_root"
+        action="action_attendance_sync_log"
+        sequence="30"
+    />
+
+</odoo>

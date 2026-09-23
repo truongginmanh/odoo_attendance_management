@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_attendance_employee_mapping_user,attendance.employee.mapping.user,model_attendance_employee_mapping,,1,1,1,1
+access_attendance_raw_user,attendance.raw.user,model_attendance_raw,,1,1,1,1
+access_attendance_device_user,attendance.device.user,model_attendance_device,,1,1,1,1
+access_attendance_sync_log_user,attendance.sync.log.user,model_attendance_sync_log,,1,1,1,1
